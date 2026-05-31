@@ -2,192 +2,229 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: gilroy, sans-serif;
 }
 
+html,
 body {
-    background-color: #f1f2f4;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffffff;
 }
 
-/* HEADER */
-
-header {
-    width: 100%;
-    background-color: white;
-    padding: 15px 30px;
+header{
+    width : 77%;
+    background-color: rgb(255, 252, 255);
+    height : 200px;
+    margin : 0px auto; /*auto-for adjusting left and right margin equally*/
+    position : fixed;
+    left : 12.5%;
+    z-index: 1;
 }
 
+nav{
+    display: flex;
+    flex-direction : column;
+    gap : 10px;
+    /* border: 2px solid black; */
+}
 
-.top-nav {
+#top-nav{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    margin : 0px 10px;
+    padding : 15px 10px 10px 10px;
+    /* border: 2px solid red; */
 }
 
-/* LEFT SIDE */
-
-.top-left {
+.top-nav-left{
     display: flex;
-    gap: 15px;
+    gap : 0.5rem;
 }
-
-.flipkart-btn,
-.travel-btn {
+.btn{
+    display : flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    width : 120px;
+    height : 40px;
     border: none;
-    padding: 14px 28px;
-    border-radius: 12px;
-    font-size: 20px;
-    font-weight: bold;
     cursor: pointer;
 }
 
-.flipkart-btn {
-    background-color: #ffe500;
+.top-nav-right{
+    display:flex;
+    justify-content: center;
+    gap : 0.5rem;
 }
 
-.travel-btn {
-    background-color: #e8e8e8;
-}
-
-/* RIGHT SIDE */
-
-.top-right {
+.bottom-nav{
     display: flex;
-    align-items: center;
-    gap: 10px;
 }
-
-.top-right i {
-    font-size: 22px;
-}
-
-.top-right span {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.top-right a {
-    text-decoration: none;
-    color: #2874f0;
-    font-size: 18px;
-}
-
-
-.bottom-nav {
-    margin-top: 20px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 10px;
-    /* border-bottom: rgb(165, 165, 165) 2px solid; */
-}
-
-
-.color-bars-container {
-    width: 100%;
-    height: 55px;
-    background-color: #d6d4d4;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    padding: 6px;
-    gap: 10px;
-}
-
-.color-bar {
-    height: 100%;
-}
-
-.color-bar-1 {
-    flex: 7;
-    background-color: #6cf5c9;
-}
-
-.color-bar-2 {
-    flex: 3;
-    background-color: #8af473;
-}
-
-
-.menu {
-    display: flex;
-    align-items: center;
-    gap: 35px;
-}
-
-.menu-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 22px;
-    cursor: pointer;
-}
-
-.menu-item i {
-    font-size: 22px;
-}
-.nav-links-container{
-    width: 100%;
-    padding-top: 20px;
-
-}
-#nav-links{
-    padding: 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    gap: 8px;
-    background-color: #00f204; /* Bright green background from your image */
-}
-
-.icone-item {
-    flex: 1;
-    height: 70px;
-    background-color: #eaebf1;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 6px;
-    font-size: 14px;
-    color: #333;
-}
-
-/* AD BANNERS */
-.ad-banner-container {
-    width: 100%;
-    padding: 20px;
-    background-color: #d9d9d9;
-    margin-top: 10px;
-}
-
-.ad-banners {
-    display: flex;
-    gap: 15px;
-    height: 180px;
-}
-
-.ad-banner {
-    border-radius: 12px;
+.input-box{
+    width : 70%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
-    color: #000;
+    padding : 10px;
+    border : 2px solid rgb(31, 119, 159);
+    border-radius: 10px;
+}
+.input-box input{
+    width : 100%;
+    height : 15px;
+    border : none;
+    background-color: rgb(255, 252, 255);
 }
 
-.ad-banner-1 {
-    flex: 1;
-    background-color: #00ffff;
+.options{
+    width : 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items : center;
+    color : rgb(66, 65, 65);
 }
 
-.ad-banner-2 {
-    flex: 1.2;
-    background-color: #d61c3c;
+.options select{
+    border : none;
+    outline : none;
+    cursor : pointer;
 }
 
-.ad-banner-3 {
-    flex: 0.6;
-    background-color: #f5f5dc;
+.icons-box{
+    width : 100%;
+    display: flex;
+    align-items : center;
+    justify-content: space-evenly;
+}
+
+.box-item{
+    width : 60x;
+    height : 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content : center;
+    align-items : center;
+    gap : 5px;
+    cursor: pointer;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap : 25px;
+    width : 75%;
+    margin : 0px auto;
+    position: relative;
+    top : 220px;
+}
+
+#ad-banner{
+    display: flex;
+    gap : 20px; 
+}
+
+.ad-banners{
+    flex : 1;
+    height: 200px;
+    cursor: pointer;
+}
+
+#banner-item1,#banner-item2{
+    flex-grow : 2;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#banner-item3{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-1{
+    object-fit: cover;
+    border-radius : 15px;
+    height : 200px;
+
+}
+
+#img-2{
+    height : 190px;
+    width : 190px;
+    border-radius : 15px;
+}
+
+#home-decor{
+    background-color : orangered;
+    height : 270px;
+    padding : 15px;
+    display : flex;
+    flex-direction: column;
+    gap : 10px;
+}
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width : 100%;
+    color : white;
+    /* border: 1px solid; */
+}
+
+#arrow{
+    height : 20px;
+    width : 40px;
+    background-color: white;
+    border-radius : 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contain-decor{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+    height : 200px;
+    border-radius : 15px; 
+}
+
+.decor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.decor img{
+    width : 210px;
+    height : 160px;
+    object-fit: cover;
+    border-radius : 15px;
+}
+
+#spotlight{
+    width : 60%;
+    height : 500px;
+    display: flex;
+    flex-direction: column;
+    gap : 5px;
+}
+
+.brands{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height : 240px;
+}
+
+.shoes{
+    height : 230px;
+    width : 190px;
+    border-radius: 15px;
+    cursor: pointer;
 }
