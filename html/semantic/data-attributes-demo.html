@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Attributes Demo</title>
+</head>
+<body>
+    <h3>Intro to data</h3>
+    <p class="para">Parul university</p>
+    <p id="path">This is a paragraph with an ID.</p>
+    <div data = "Inclass">
+        <h1>Head</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis blanditiis laborum nobis dolore distinctio eaque praesentium excepturi enim dolores ipsa! Nemo maiores iure eius iusto accusantium ab incidunt aspernatur tempore?</p>
+</div>
+    <script>
+    let paraWithClass = document.getElementsByClassName('para');
+    console.log(paraWithClass);
+    let patheithId = document.getElementById('path');
+    console.log(patheithId);
+    let divWithData = document.querySelector('div[data="Inclass"]');
+    console.log(divWithData);
+    </script>
+</body>
+</html>

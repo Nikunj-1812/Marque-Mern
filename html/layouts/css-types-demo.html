@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Types Demo</title>
+    <style>
+        #main-heading {
+            color: blue;
+            text-align: center;
+            margin-bottom: 2%;
+            border-bottom : 2px solid black;
+            padding: 40px;
+        }
+        .sub-heading{
+            color: green;
+            text-align: justify;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        #paragraph{
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <a href="#paragraph">1. Inline CSS<br></a>
+        <a href="#paragraph1">2. Internal CSS<br></a>
+        <a href="#paragraph2">3. External CSS<br></a>
+
+        <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima aliquid eum ut optio recusandae nobis enim, tenetur dicta iusto accusamus incidunt assumenda dignissimos neque fugiat doloremque nostrum ipsam omnis eveniet.</p>
+    </div>
+    <div>
+<h1 id = "main-heading">Types of CSS in Web Development</h1>
+<div >
+    <h3 class="sub-heading">1. Inline CSS</h3>
+    <p>Inline CSS is applied directly to a specific HTML element using the
+style attribute.Usage: Best for quick, one-off style changes or testing
+specific elements.</p>
+<p><strong><em>Where and How to use:</em></strong> It's used directly within the opening tag of element using style attribute</p>
+<p id="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quia voluptatem esse dignissimos ad possimus vero debitis, nulla libero doloremque et officiis ducimus voluptatibus commodi error rem illo corporis. Autem.</p>
+</div>
+<div >
+    <h3 class="sub-heading">2. Internal CSS</h3>
+    <p>Internal CSS is defined within a "style" tag in the head section of an
+keep styles separate from content</p>
+<p><strong><em>Where and How to use:</em></strong> It's used inside head element within style element</p>
+<p id="paragraph1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quia voluptatem esse dignissimos ad possimus vero debitis, nulla libero doloremque et officiis ducimus voluptatibus commodi error rem illo corporis. Autem.</p>
+</div>
+<div >
+    <h3 class="sub-heading">3. External CSS</h3>
+    <p>External CSS is defined in a separate .css file and linked to the HTML
+document using the "<link />" tag.Usage: Ideal for styling multiple pages
+consistently and maintaining a clean separation between content and
+presentation.</p>
+    <p><strong><em>Where and How to use:</em></strong> We need to create separate file and link it with html using <link> tag / element</p>
+<p id="paragraph2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quia voluptatem esse dignissimos ad possimus vero debitis, nulla libero doloremque et officiis ducimus voluptatibus commodi error rem illo corporis. Autem.</p>
+</div>
+
+</div>
+    </div>
+</body>
+</html>
