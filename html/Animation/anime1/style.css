@@ -1,0 +1,63 @@
+#main{
+    background: black;
+    display:grid;
+    gap:20px;
+    justify-content:center;
+    align-items:center;
+
+}
+.box1{
+    background:red;
+    animation:redLight 6s infinite;
+}
+.box2{
+    background:yellow;
+    animation:yellowLight 6s infinite;
+}
+.box3{
+    background:lightgreen;
+    animation:greenLight 6s infinite;
+}
+@keyframes redLight{
+    0%,33%{
+        opacity:1;
+        box-shadow:0 0 30px red;
+    }
+    34%,100%{
+        opacity:0.3;
+    }
+}
+
+@keyframes yellowLight{
+    0%,33%{
+        opacity:0.3;
+    }
+    34%,66%{
+        opacity:1;
+        box-shadow:0 0 30px yellow;
+    }
+    67%,100%{
+        opacity:0.3;
+    }
+}
+
+@keyframes greenLight{
+    0%,66%{
+        opacity:0.3;
+    }
+    67%,100%{
+        opacity:1;
+        box-shadow:0 0 30px lightgreen;
+    }
+}
+
+.box1,.box2,.box3{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    width:150px;
+    height:150px;
+    opacity:0.3;
+}
+
