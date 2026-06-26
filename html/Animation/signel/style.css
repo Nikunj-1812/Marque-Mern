@@ -15,7 +15,7 @@
     animation:yellowLight 6s infinite;
 }
 .box3{
-    background:lightgreen;
+    background:green;
     animation:greenLight 6s infinite;
 }
 @keyframes redLight{
@@ -47,7 +47,7 @@
     }
     67%,100%{
         opacity:1;
-        box-shadow:0 0 30px lightgreen;
+        box-shadow:0 0 30px green;
     }
 }
 
