@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form Validation</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Registration Form</h1>
+    <form id="registrationForm">
+
+        <!-- Name -->
+        <div class="field">
+            <label>Name</label>
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+            >
+            <small class="error" id="nameError"></small>
+        </div>
+
+        <!-- Email -->
+        <div class="field">
+            <label>Email</label>
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+            >
+            <small class="error" id="emailError"></small>
+        </div>
+
+        <!-- Phone -->
+        <div class="field">
+            <label>Phone</label>
+            <input
+                type="text"
+                id="phone"
+                placeholder="10 digit phone number"
+            >
+            <small class="error" id="phoneError"></small>
+        </div>
+
+        <!-- Password -->
+        <div class="field">
+            <label>Password</label>
+            <input
+                type="password"
+                id="password"
+                placeholder="Password"
+            >
+            <small class="error" id="passwordError"></small>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="field">
+            <label>Confirm Password</label>
+            <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Confirm Password"
+            >
+            <small class="error" id="confirmPasswordError"></small>
+        </div>
+
+        <!-- Gender -->
+        <div class="field">
+            <label>Gender</label>
+            <div class="radio-group">
+                <label>
+                    <input
+                        type="radio"
+                        name="gender"
+                        value="Male"
+                    >
+                    Male
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="gender"
+                        value="Female"
+                    >
+                    Female
+                </label>
+            </div>
+            <small class="error" id="genderError"></small>
+        </div>
+
+        <!-- Country -->
+        <div class="field">
+            <label>Country</label>
+            <select id="country">
+                <option value="">Select Country</option>
+                <option>India</option>
+                <option>USA</option>
+                <option>Canada</option>
+            </select>
+            <small class="error" id="countryError"></small>
+        </div>
+
+        <!-- Checkbox -->
+        <div class="field">
+            <label>
+                <input
+                    type="checkbox"
+                    id="terms"
+                >
+                I Agree to Terms & Conditions
+            </label>
+            <small class="error" id="termsError"></small>
+        </div>
+        <button id="submitBtn">
+            Register
+        </button>
+        <p id="successMessage"></p>
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
