@@ -39,7 +39,7 @@
 // btn.addEventListener("Click",greet);
 // btn.removeEventListener("Click",greet);
 
-// let text = document.getElementById("text");
+// let text = document.getElementById("name");
 // let count = document.getElementById("count");
 
 // text.addEventListener("input",function(){
@@ -76,3 +76,10 @@
 //     document.getElementById("bar").style.width = width + "%";
 //     if(width>100) clearInterval(timer);
 // },100);
+
+let input = document.getElementById("name");
+
+input.addEventListener("input", (event) => {
+    console.log(event);
+});
+            
