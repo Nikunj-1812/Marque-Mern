@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Quotes</h2>
+    <button>Click</button>
+    <p></p>
+    <p></p>
+    <p id = "s1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur numquam in accusamus aperiam neque cumque sint maiores! Quasi, quod commodi ducimus voluptas magnam hic. Sequi nam itaque quia reprehenderit quisquam.</p>
+    <button id = "on">On</button>
+    <button id = "off">Off</button>
+    <div id="border" style="margin : 10px ;border :2px solid black; display : flex; justify-content:center; align-items:center; margin: 10px; flex-direction:column">
+        <div id = "bulb" style="margin: 10px;height: 50px; width:50px; border-radius:100%;background-color:black"></div>
+    </div>
+
+    </div>
+    <script>
+        const quotes = [
+            {
+                quote: "The best way to get started is to quit talking and begin doing.",
+                createdBy: "Walt Disney",
+            },
+            {
+                quote: "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+                createdBy: "Winston Churchill",
+            },
+            {
+                quote: "Don't watch the clock; do what it does. Keep going.",
+                createdBy: "Sam Levenson",
+            },
+            {
+                quote: "Dream big and dare to fail.",
+                createdBy: "Norman Vaughan",
+            },
+            {
+                quote: "The future depends on what you do today.",
+                createdBy: "Mahatma Gandhi",
+            },
+            {
+                quote: "It always seems impossible until it's done.",
+                createdBy: "Nelson Mandela",
+            },
+            {
+                quote: "Believe you can and you're halfway there.",
+                createdBy: "Theodore Roosevelt",
+            },
+            {
+                quote: "Do one thing every day that scares you.",
+                createdBy: "Eleanor Roosevelt",
+            },
+            {
+                quote: "Your time is limited, so don't waste it living someone else's life.",
+                createdBy: "Steve Jobs",
+            },
+            {
+                quote: "Opportunities don't happen. You create them.",
+                createdBy: "Chris Grosser",
+            },
+            {
+                quote: "The only limit to our realization of tomorrow is our doubts of today.",
+                createdBy: "Franklin D. Roosevelt",
+            },
+            {
+                quote: "Hardships often prepare ordinary people for an extraordinary destiny.",
+                createdBy: "C.S. Lewis",
+            },
+            {
+                quote: "If you can dream it, you can do it.",
+                createdBy: "Walt Disney",
+            },
+            {
+                quote: "The secret of getting ahead is getting started.",
+                createdBy: "Mark Twain",
+            },
+            {
+                quote: "Everything you've ever wanted is on the other side of fear.",
+                createdBy: "George Addair",
+            },
+            {
+                quote: "Small steps every day lead to big results.",
+                createdBy: "Unknown",
+            },
+            {
+                quote: "Discipline is choosing between what you want now and what you want most.",
+                createdBy: "Abraham Lincoln (attributed)",
+            },
+            {
+                quote: "Great things never come from comfort zones.",
+                createdBy: "Unknown",
+            },
+            {
+                quote: "Don't limit your challenges. Challenge your limits.",
+                createdBy: "Jerry Dunn",
+            },
+            {
+                quote: "Success usually comes to those who are too busy to be looking for it.",
+                createdBy: "Henry David Thoreau",
+            },
+        ];
+
+        const button = document.getElementsByTagName("button")[0];
+        const par = document.getElementsByTagName('p');
+
+        button.addEventListener("click", function(){
+            const randomq = Math.floor(Math.random()*quotes.length);
+
+            par[0].textContent = quotes[randomq].quote;
+            par[1].textContent = "- " + quotes[randomq].createdBy;  
+        }) // Done This is for click to genrate quote
+        const S1 = document.getElementById("s1");
+        S1.style.backgroundColor = 'blue'; // This is for color
+       
+        // on the bulb
+        const on = document.getElementById("on");
+        const off = document.getElementById("off");
+        const bulb = document.getElementById("bulb");
+        on.addEventListener("click" , function(){
+            bulb.style.backgroundColor = "yellow";
+        });
+        off.addEventListener("click" , function(){
+            bulb.style.backgroundColor = "black";
+        });
+    </script>
+</body>
+
+</html>

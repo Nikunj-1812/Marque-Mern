@@ -2,26 +2,42 @@ let input = document.getElementById("input");
 let btn = document.getElementById("btn");
 let task = document.getElementById("tasklist");
 
+btn.addEventListener("click", function () {
 
-btn.addEventListener("click",function(){
-    let tasklist = input.value;
-    if(tasklist === ""){
-        alert("add a task");
+    let tasklist = input.value.trim();
+    if (tasklist === "") {
+        alert("Add a task");
         return;
     }
 
     let li = document.createElement("li");
-    li.innerText = tasklist;
+    let span = document.createElement("span");
+    span.innerText = tasklist;
 
+    let btnGroup = document.createElement("div");
+    btnGroup.classList.add("btn-group");
     let del = document.createElement("button");
     del.innerText = "Delete";
     del.classList.add("deleteBtn");
-    del.addEventListener("click", function(){
+
+    del.addEventListener("click", function () {
         li.remove();
     });
 
-    li.appendChild(del);
-    task.appendChild(li);
-    input.value = "";
+    let com = document.createElement("button");
+    com.innerText = "Complete";
+    com.classList.add("completBtn");
+    com.addEventListener("click", function () {
+        span.classList.toggle("completed");
+    });
 
-})
+    btnGroup.appendChild(del);
+    btnGroup.appendChild(com);
+
+    li.appendChild(span);
+    li.appendChild(btnGroup);
+
+    task.appendChild(li);
+
+    input.value = "";
+});

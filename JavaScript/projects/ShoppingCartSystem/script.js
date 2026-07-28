@@ -51,7 +51,9 @@ class Order {
 
     addtocart(productId) {
         let index = this.products.findIndex(
-            (item) => item.productId === productId
+           function(item){
+            return item.productId===productId;
+}
         );
 
         if (index === -1) {
@@ -60,15 +62,15 @@ class Order {
         }
 
         let product = this.products.splice(index, 1)[0];
-
         this.cartItems.push(product);
-
         console.log(product.description + " Added To Cart");
     }
 
     recart(productId) {
         let index = this.cartItems.findIndex(
-            (item) => item.productId === productId
+            function(item){
+                return item.productId===productId;
+}
         );
 
         if (index === -1) {
