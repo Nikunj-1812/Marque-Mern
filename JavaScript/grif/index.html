@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+    body {
+        background: #f2f2f2;
+        padding: 40px;
+    }
+    /* Main container */
+    .container {
+        max-width: 1400px;
+        margin: auto;
+    }
+    .container h1 {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 40px;
+        color: #333;
+    }
+    /* Product Grid */
+    .list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+    /* Product Card */
+    .card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        transition: 0.3s ease;
+    }
+    /* Product Image */
+    .product-image {
+        width: 100%;
+    }
+    .product-image img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+    /* Product Details */
+
+    .product-details {
+        padding: 20px;
+    }
+    .product-details h2 {
+        font-size: 22px;
+        color: #333;
+        margin-bottom: 12px;
+    }
+    /* Brand */
+
+    .brand {
+        color: #666;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    /* Price */
+
+    .price {
+        font-size: 25px;
+        font-weight: bold;
+        color: red;
+        margin-bottom: 15px;
+    }
+    /* Quantity */
+    .quantity {
+        color: black;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    /* Button */
+    button {
+
+        width: 100%;
+        padding: 12px;
+
+        border: none;
+        border-radius: 8px;
+
+        background: #111;
+        color: white;
+
+        font-size: 16px;
+        cursor: pointer;
+
+        transition: 0.3s;
+    }
+    /* Responsive Design */
+    @media(max-width:1200px){
+
+        .list {
+            grid-template-columns: repeat(3,1fr);
+        }
+
+    }
+    @media(max-width:900px){
+        .list {
+            grid-template-columns: repeat(2,1fr);
+        }
+
+    }
+    @media(max-width:600px){
+
+        body {
+            padding: 20px;
+        }
+
+
+        .list {
+            grid-template-columns: 1fr;
+        }
+
+
+        .container h1 {
+            font-size: 30px;
+        }
+
+    }
+   </style>
+</head>
+<body>
+    <div class="container">
+        <div class="list">
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

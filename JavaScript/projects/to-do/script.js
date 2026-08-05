@@ -11,33 +11,37 @@ btn.addEventListener("click", function () {
     }
 
     let li = document.createElement("li");
-    let span = document.createElement("span");
-    span.innerText = tasklist;
+    let div = document.createElement("div");
+    div.innerText = tasklist;
 
     let btnGroup = document.createElement("div");
     btnGroup.classList.add("btn-group");
+
     let del = document.createElement("button");
     del.innerText = "Delete";
     del.classList.add("deleteBtn");
-
     del.addEventListener("click", function () {
         li.remove();
     });
 
     let com = document.createElement("button");
     com.innerText = "Complete";
-    com.classList.add("completBtn");
+    com.classList.add("completBtn"); 
     com.addEventListener("click", function () {
-        span.classList.toggle("completed");
-    });
+    div.classList.toggle("completed");
+    com.style.display = "none";
+});
+    
 
     btnGroup.appendChild(del);
     btnGroup.appendChild(com);
 
-    li.appendChild(span);
+    li.appendChild(div);
     li.appendChild(btnGroup);
 
     task.appendChild(li);
 
     input.value = "";
 });
+
+

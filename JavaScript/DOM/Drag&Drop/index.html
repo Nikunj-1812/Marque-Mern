@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag and Drop</title>
+
+    <style>
+      .items {
+        width: 60%;
+        height: 100px;
+        margin: 0 auto;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 800;
+        overflow: hidden;
+      }
+
+      .items img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .items-1 {
+        background-color: salmon;
+      }
+
+      .items-2 {
+        background-color: rgb(12, 223, 139);
+      }
+
+      #container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(500px, 1fr));
+        gap: 2rem;
+        grid-auto-rows: 500px;
+      }
+
+      .containers {
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .containers:nth-child(1) {
+        background-color: rgb(202, 207, 207);
+      }
+
+      .containers:nth-child(2) {
+        background-color: azure;
+      }
+
+      .dragging {
+        opacity: 0.5;
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div id="container">
+
+      <!-- FOOD -->
+      <div class="containers">
+
+        <div class="items items-1 draggables" draggable="true">
+          <img
+            src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38"
+            alt="Pizza"
+          />
+        </div>
+
+        <div class="items items-1 draggables" draggable="true">
+          <img
+            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd"
+            alt="Burger"
+          />
+        </div>
+
+        <div class="items items-1 draggables" draggable="true">
+          <img
+            src="https://images.unsplash.com/photo-1571091718767-18b5b1457add"
+            alt="Food"
+          />
+        </div>
+
+      </div>
+
+
+      <!-- CARS -->
+      <div class="containers">
+
+        <div class="items items-2 draggables" draggable="true">
+          <img
+            src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8"
+            alt="Car"
+          />
+        </div>
+
+        <div class="items items-2 draggables" draggable="true">
+          <img
+            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70"
+            alt="Car"
+          />
+        </div>
+
+        <div class="items items-2 draggables" draggable="true">
+          <img
+            src="https://images.unsplash.com/photo-1542362567-b07e54358753"
+            alt="Car"
+          />
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- DROP CONTAINER -->
+    <div
+      class="containers"
+      style="
+        background-color: bisque;
+        width: 300px;
+        height: 300px;
+      "
+    ></div>
+
+
+    <script src="script.js"></script>
+
+  </body>
+</html>

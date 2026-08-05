@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  padding: 30px;
+}
+
+/* Container */
+.container {
+  width: 80%;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Card */
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+/* Heading */
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Label */
+label {
+  display: inline-block;
+  width: 120px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Input and Select */
+input,
+select {
+  width: 250px;
+  padding: 8px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Input Focus */
+input:focus,
+select:focus {
+  outline: none;
+  border-color: steelblue;
+}
+
+/* Button */
+button {
+  padding: 9px 18px;
+  background-color: steelblue;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Button Hover */
+button:hover {
+  background-color: #346d9c;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+/* Table Header */
+th {
+  background-color: #444;
+  color: white;
+}
+
+/* Table Cells */
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Alternate Row Color */
+tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+/* Row Hover */
+tbody tr:hover {
+  background-color: #eeeeee;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 600px) {
+
+  body {
+    padding: 15px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .card {
+    padding: 15px;
+    overflow-x: auto;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: block;
+    width: 100%;
+    margin-bottom: 6px;
+  }
+
+  input,
+  select {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  table {
+    min-width: 600px;
+  }
+
+  th,
+  td {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
